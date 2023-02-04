@@ -1,0 +1,27 @@
+<template>
+	<view>
+		<view>加速计算</view>
+		<view>资源计算</view>
+		<view>移民令计算</view>
+		<view>竞拍系统</view>
+		<view>广告位联系</view>
+		<view>买卖账号</view>
+		<view>找号看号</view>
+		<view>付费咨询</view>
+		<view>代练/代肝通道</view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			};
+		}
+	}
+</script>
+
+<style lang="scss">
+
+</style>

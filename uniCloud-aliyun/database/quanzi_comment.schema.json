@@ -1,0 +1,78 @@
+{
+	"bsonType": "object",
+	"required": [
+		"article_id", //文章ID
+		"user_id", // 用户ID
+		"comment_content", // 评论内容
+		// "like_count", // 点赞个数
+		"comment_type", // 评论类型
+		// "reply_user_id", // 回复的用户ID 谁回复的
+		// "reply_comment_id" // 回复哪一条内容的ID 用来做二级回复
+	],
+	"permission": {
+		"read": true,
+		"create": "auth.uid != null",
+		"update": "doc.user_id == auth.uid || 'webmaster' in auth.role",
+		"delete": "doc.user_id == auth.uid || 'webmaster' in auth.role"
+	},
+	"properties": {
+		"_id": {
+			"description": "存储文档 ID（文章 ID），系统自动生成"
+		},
+		"article_id": {
+			"bsonType": "string",
+			"description": "文章ID，opendb-news-posts 表中的`_id`字段",
+			"foreignKey": "quanzi_article._id"
+		},
+		"user_id": {
+			"bsonType": "string",
+			"description": "评论者ID，参考`uni-id-users` 表",
+			"forceDefaultValue": {
+				"$env": "uid"
+			},
+			"foreignKey": "uni-id-users._id"
+		},
+		"comment_content": {
+			"bsonType": "string",
+			"description": "评论内容",
+			"title": "评论内容",
+			"trim": "right"
+		},
+		"comment_type": {
+			"bsonType": "int",
+			"description": "回复类型： 0 针对文章的回复  1 针对评论的回复"
+		},
+		"reply_user_id": {
+			"bsonType": "string",
+			"description": "被回复的评论用户ID，comment_type为1时有效",
+			"foreignKey": "uni-id-users._id"
+		},
+		"reply_comment_id": {
+			"bsonType": "string",
+			"description": "被回复的评论ID，comment_type为1时有效",
+			"parentKey": "_id" // 这里将foreignKey修改为parentKey，因为关联的是自己，所以需要将opendb-news-comments._id改为_id，也就是第19行
+		},
+		"comment_date": {
+			"bsonType": "timestamp",
+			"description": "评论发表时间",
+			"forceDefaultValue": {
+				"$env": "now"
+			}
+		},
+		"comment_ip": {
+			"bsonType": "string",
+			"description": "评论发表时 IP 地址",
+			"forceDefaultValue": {
+				"$env": "clientIP"
+			}
+		},
+		"province": {
+			"bsonType": "string",
+			"title": "发布省市",
+			"description": "发布省市",
+			"label": "发布省市",
+			"trim": "both"
+		}
+	},
+	"version": "0.0.1"
+}

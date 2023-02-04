@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["uni_modules/uview-ui/components/u-link/u-link"],{"0957":function(t,n,e){"use strict";(function(t){var i=e("4ea4");Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var u=i(e("3050")),o={name:"u-link",mixins:[t.$u.mpMixin,t.$u.mixin,u.default],computed:{linkStyle:function(){var n={color:this.color,fontSize:t.$u.addUnit(this.fontSize),lineHeight:t.$u.addUnit(t.$u.getPx(this.fontSize)+2),textDecoration:this.underLine?"underline":"none"};return n}},methods:{openLink:function(){var n=this;t.setClipboardData({data:this.href,success:function(){t.hideToast(),n.$nextTick((function(){t.$u.toast(n.mpTips)}))}}),this.$emit("click")}}};n.default=o}).call(this,e("543d")["default"])},"6e82":function(t,n,e){"use strict";e.r(n);var i=e("868e"),u=e("bae4");for(var o in u)["default"].indexOf(o)<0&&function(t){e.d(n,t,(function(){return u[t]}))}(o);e("7c60");var a=e("f0c5"),c=Object(a["a"])(u["default"],i["b"],i["c"],!1,null,"0f0cb6d2",null,!1,i["a"],void 0);n["default"]=c.exports},"7c60":function(t,n,e){"use strict";var i=e("e108"),u=e.n(i);u.a},"868e":function(t,n,e){"use strict";e.d(n,"b",(function(){return i})),e.d(n,"c",(function(){return u})),e.d(n,"a",(function(){}));var i=function(){var t=this.$createElement,n=(this._self._c,this.__get_style([this.linkStyle,this.$u.addStyle(this.customStyle)]));this.$mp.data=Object.assign({},{$root:{s0:n}})},u=[]},bae4:function(t,n,e){"use strict";e.r(n);var i=e("0957"),u=e.n(i);for(var o in i)["default"].indexOf(o)<0&&function(t){e.d(n,t,(function(){return i[t]}))}(o);n["default"]=u.a},e108:function(t,n,e){}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'uni_modules/uview-ui/components/u-link/u-link-create-component',
+    {
+        'uni_modules/uview-ui/components/u-link/u-link-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("6e82"))
+        })
+    },
+    [['uni_modules/uview-ui/components/u-link/u-link-create-component']]
+]);

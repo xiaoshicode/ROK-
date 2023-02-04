@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/self/self",
+    "pages/tool/tool",
+    "uni_modules/uni-id-pages/pages/userinfo/deactivate/deactivate",
+    "uni_modules/uni-id-pages/pages/userinfo/userinfo",
+    "uni_modules/uni-id-pages/pages/userinfo/bind-mobile/bind-mobile",
+    "uni_modules/uni-id-pages/pages/userinfo/cropImage/cropImage",
+    "uni_modules/uni-id-pages/pages/login/login-withoutpwd",
+    "uni_modules/uni-id-pages/pages/login/login-withpwd",
+    "uni_modules/uni-id-pages/pages/login/login-smscode",
+    "uni_modules/uni-id-pages/pages/register/register",
+    "uni_modules/uni-id-pages/pages/register/register-by-email",
+    "uni_modules/uni-id-pages/pages/retrieve/retrieve",
+    "uni_modules/uni-id-pages/pages/retrieve/retrieve-by-email",
+    "uni_modules/uni-id-pages/pages/common/webview/webview",
+    "uni_modules/uni-id-pages/pages/userinfo/change_pwd/change_pwd",
+    "uni_modules/uni-id-pages/pages/register/register-admin",
+    "uni_modules/uni-id-pages/pages/userinfo/set-pwd/set-pwd",
+    "uni_modules/uni-feedback/pages/opendb-feedback/opendb-feedback",
+    "uni_modules/uni-feedback/pages/opendb-feedback/edit",
+    "uni_modules/uni-feedback/pages/opendb-feedback/list",
+    "uni_modules/uni-feedback/pages/opendb-feedback/detail"
+  ],
+  "subPackages": [
+    {
+      "root": "pages_self",
+      "pages": [
+        "quanzi_like/list",
+        "quanzi_article/list"
+      ]
+    },
+    {
+      "root": "pages_forum",
+      "pages": [
+        "detail/detail",
+        "edit/edit",
+        "reply/reply"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "万国觉醒圈子",
+    "navigationBarBackgroundColor": "#F3F4FF",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "圈子",
+        "iconPath": "static/images/circle.png",
+        "selectedIconPath": "static/images/circle-fill.png"
+      },
+      {
+        "pagePath": "pages/tool/tool",
+        "text": "工具",
+        "iconPath": "static/images/setting.png",
+        "selectedIconPath": "static/images/setting-fill.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "我的",
+        "iconPath": "static/images/account.png",
+        "selectedIconPath": "static/images/account-fill.png"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {}
+}
